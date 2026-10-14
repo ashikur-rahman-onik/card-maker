@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>প্রিমিয়াম আইডি কার্ড ও প্রত্যয়নপত্র জেনারেটর</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Hind Siliguri & Noto Serif Bengali -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- QRious (Offline Canvas QR Generator) & html2canvas (HD Export) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- html-to-image (inline, browser-এর নিজস্ব টেক্সট রেন্ডারিং ব্যবহার করে, তাই বাংলা লেখা ভাঙে না) -->
+  <script>
+!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"function"==typeof define&&define.amd?define(["exports"],e):e((t="undefined"!=typeof globalThis?globalThis:t||self).htmlToImage={})}(this,(function(t){"use strict";function e(t,e,n,r){return new(n||(n=Promise))((function(i,o){function u(t){try{a(r.next(t))}catch(t){o(t)}}function c(t){try{a(r.throw(t))}catch(t){o(t)}}function a(t){var e;t.done?i(t.value):(e=t.value,e instanceof n?e:new n((function(t){t(e)}))).then(u,c)}a((r=r.apply(t,e||[])).next())}))}function n(t,e){var n,r,i,o,u={label:0,sent:function(){if(1&i[0])throw i[1];return i[1]},trys:[],ops:[]};return o={next:c(0),throw:c(1),return:c(2)},"function"==typeof Symbol&&(o[Symbol.iterator]=function(){return this}),o;function c(c){return function(a){return function(c){if(n)throw new TypeError("Generator is already executing.");for(;o&&(o=0,c[0]&&(u=0)),u;)try{if(n=1,r&&(i=2&c[0]?r.return:c[0]?r.throw||((i=r.return)&&i.call(r),0):r.next)&&!(i=i.call(r,c[1])).done)return i;switch(r=0,i&&(c=[2&c[0],i.value]),c[0]){case 0:case 1:i=c;break;case 4:return u.label++,{value:c[1],done:!1};case 5:u.label++,r=c[1],c=[0];continue;case 7:c=u.ops.pop(),u.trys.pop();continue;default:if(!(i=u.trys,(i=i.length>0&&i[i.length-1])||6!==c[0]&&2!==c[0])){u=0;continue}if(3===c[0]&&(!i||c[1]>i[0]&&c[1]<i[3])){u.label=c[1];break}if(6===c[0]&&u.label<i[1]){u.label=i[1],i=c;break}if(i&&u.label<i[2]){u.label=i[2],u.ops.push(c);break}i[2]&&u.ops.pop(),u.trys.pop();continue}c=e.call(t,u)}catch(t){c=[6,t],r=0}finally{n=i=0}if(5&c[0])throw c[1];return{value:c[0]?c[1]:void 0,done:!0}}([c,a])}}}var r,i=(r=0,function(){return r+=1,"u".concat("0000".concat((Math.random()*Math.pow(36,4)<<0).toString(36)).slice(-4)).concat(r)});function o(t){for(var e=[],n=0,r=t.length;n<r;n++)e.push(t[n]);return e}function u(t,e){var n=(t.ownerDocument.defaultView||window).getComputedStyle(t).getPropertyValue(e);return n?parseFloat(n.replace("px","")):0}function c(t,e){void 0===e&&(e={});var n,r,i,o=e.width||(r=u(n=t,"border-left-width"),i=u(n,"border-right-width"),n.clientWidth+r+i),c=e.height||function(t){var e=u(t,"border-top-width"),n=u(t,"border-bottom-width");return t.clientHeight+e+n}(t);return{width:o,height:c}}var a=16384;function s(t,e){return void 0===e&&(e={}),t.toBlob?new Promise((function(n){t.toBlob(n,e.type?e.type:"image/png",e.quality?e.quality:1)})):new Promise((function(n){for(var r=window.atob(t.toDataURL(e.type?e.type:void 0,e.quality?e.quality:void 0).split(",")[1]),i=r.length,o=new Uint8Array(i),u=0;u<i;u+=1)o[u]=r.charCodeAt(u);n(new Blob([o],{type:e.type?e.type:"image/png"}))}))}function l(t){return new Promise((function(e,n){var r=new Image;r.decode=function(){return e(r)},r.onload=function(){return e(r)},r.onerror=n,r.crossOrigin="anonymous",r.decoding="async",r.src=t}))}function f(t){return e(this,void 0,void 0,(function(){return n(this,(function(e){return[2,Promise.resolve().then((function(){return(new XMLSerializer).serializeToString(t)})).then(encodeURIComponent).then((function(t){return"data:image/svg+xml;charset=utf-8,".concat(t)}))]}))}))}function h(t,r,i){return e(this,void 0,void 0,(function(){var e,o,u;return n(this,(function(n){return e="http://www.w3.org/2000/svg",o=document.createElementNS(e,"svg"),u=document.createElementNS(e,"foreignObject"),o.setAttribute("width","".concat(r)),o.setAttribute("height","".concat(i)),o.setAttribute("viewBox","0 0 ".concat(r," ").concat(i)),u.setAttribute("width","100%"),u.setAttribute("height","100%"),u.setAttribute("x","0"),u.setAttribute("y","0"),u.setAttribute("externalResourcesRequired","true"),o.appendChild(u),u.appendChild(t),[2,f(o)]}))}))}var d=function(t,e){if(t instanceof e)return!0;var n=Object.getPrototypeOf(t);return null!==n&&(n.constructor.name===e.name||d(n,e))};function v(t,e,n){var r=".".concat(t,":").concat(e),i=n.cssText?function(t){var e=t.getPropertyValue("content");return"".concat(t.cssText," content: '").concat(e.replace(/'|"/g,""),"';")}(n):function(t){return o(t).map((function(e){var n=t.getPropertyValue(e),r=t.getPropertyPriority(e);return"".concat(e,": ").concat(n).concat(r?" !important":"",";")})).join(" ")}(n);return document.createTextNode("".concat(r,"{").concat(i,"}"))}function p(t,e,n){var r=window.getComputedStyle(t,n),o=r.getPropertyValue("content");if(""!==o&&"none"!==o){var u=i();try{e.className="".concat(e.className," ").concat(u)}catch(t){return}var c=document.createElement("style");c.appendChild(v(u,n,r)),e.appendChild(c)}}var g="application/font-woff",m="image/jpeg",w={woff:g,woff2:g,ttf:"application/font-truetype",eot:"application/vnd.ms-fontobject",png:"image/png",jpg:m,jpeg:m,gif:"image/gif",tiff:"image/tiff",svg:"image/svg+xml",webp:"image/webp"};function b(t){var e=function(t){var e=/\.([^./]*?)$/g.exec(t);return e?e[1]:""}(t).toLowerCase();return w[e]||""}function y(t){return-1!==t.search(/^(data:)/)}function x(t,e){return"data:".concat(e,";base64,").concat(t)}function S(t,r,i){return e(this,void 0,void 0,(function(){var e,o;return n(this,(function(n){switch(n.label){case 0:return[4,fetch(t,r)];case 1:if(404===(e=n.sent()).status)throw new Error('Resource "'.concat(e.url,'" not found'));return[4,e.blob()];case 2:return o=n.sent(),[2,new Promise((function(t,n){var r=new FileReader;r.onerror=n,r.onloadend=function(){try{t(i({res:e,result:r.result}))}catch(t){n(t)}},r.readAsDataURL(o)}))]}}))}))}var E={};function C(t,r,i){return e(this,void 0,void 0,(function(){var e,o,u,c,a;return n(this,(function(n){switch(n.label){case 0:if(e=function(t,e,n){var r=t.replace(/\?.*/,"");return n&&(r=t),/ttf|otf|eot|woff2?/i.test(r)&&(r=r.replace(/.*\//,"")),e?"[".concat(e,"]").concat(r):r}(t,r,i.includeQueryParams),null!=E[e])return[2,E[e]];i.cacheBust&&(t+=(/\?/.test(t)?"&":"?")+(new Date).getTime()),n.label=1;case 1:return n.trys.push([1,3,,4]),[4,S(t,i.fetchRequestInit,(function(t){var e=t.res,n=t.result;return r||(r=e.headers.get("Content-Type")||""),function(t){return t.split(/,/)[1]}(n)}))];case 2:return u=n.sent(),o=x(u,r),[3,4];case 3:return c=n.sent(),o=i.imagePlaceholder||"",a="Failed to fetch resource: ".concat(t),c&&(a="string"==typeof c?c:c.message),a&&console.warn(a),[3,4];case 4:return E[e]=o,[2,o]}}))}))}function P(t){return e(this,void 0,void 0,(function(){var e;return n(this,(function(n){return"data:,"===(e=t.toDataURL())?[2,t.cloneNode(!1)]:[2,l(e)]}))}))}function R(t,r){return e(this,void 0,void 0,(function(){var e,i,o,u;return n(this,(function(n){switch(n.label){case 0:return t.currentSrc?(e=document.createElement("canvas"),i=e.getContext("2d"),e.width=t.clientWidth,e.height=t.clientHeight,null==i||i.drawImage(t,0,0,e.width,e.height),[2,l(e.toDataURL())]):(o=t.poster,u=b(o),[4,C(o,u,r)]);case 1:return[2,l(n.sent())]}}))}))}function T(t){var r;return e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:return e.trys.push([0,3,,4]),(null===(r=null==t?void 0:t.contentDocument)||void 0===r?void 0:r.body)?[4,L(t.contentDocument.body,{},!0)]:[3,2];case 1:return[2,e.sent()];case 2:return[3,4];case 3:return e.sent(),[3,4];case 4:return[2,t.cloneNode(!1)]}}))}))}function A(t,e){return d(e,Element)&&(function(t,e){var n=e.style;if(n){var r=window.getComputedStyle(t);r.cssText?(n.cssText=r.cssText,n.transformOrigin=r.transformOrigin):o(r).forEach((function(i){var o=r.getPropertyValue(i);if("font-size"===i&&o.endsWith("px")){var u=Math.floor(parseFloat(o.substring(0,o.length-2)))-.1;o="".concat(u,"px")}d(t,HTMLIFrameElement)&&"display"===i&&"inline"===o&&(o="block"),"d"===i&&e.getAttribute("d")&&(o="path(".concat(e.getAttribute("d"),")")),n.setProperty(i,o,r.getPropertyPriority(i))}))}}(t,e),function(t,e){p(t,e,":before"),p(t,e,":after")}(t,e),function(t,e){d(t,HTMLTextAreaElement)&&(e.innerHTML=t.value),d(t,HTMLInputElement)&&e.setAttribute("value",t.value)}(t,e),function(t,e){if(d(t,HTMLSelectElement)){var n=e,r=Array.from(n.children).find((function(e){return t.value===e.getAttribute("value")}));r&&r.setAttribute("selected","")}}(t,e)),e}function L(t,r,i){return e(this,void 0,void 0,(function(){return n(this,(function(u){return i||!r.filter||r.filter(t)?[2,Promise.resolve(t).then((function(t){return function(t,r){return e(this,void 0,void 0,(function(){return n(this,(function(e){return d(t,HTMLCanvasElement)?[2,P(t)]:d(t,HTMLVideoElement)?[2,R(t,r)]:d(t,HTMLIFrameElement)?[2,T(t)]:[2,t.cloneNode(!1)]}))}))}(t,r)})).then((function(i){return function(t,r,i){var u,c;return e(this,void 0,void 0,(function(){var e;return n(this,(function(n){switch(n.label){case 0:return e=[],0===(e=null!=(a=t).tagName&&"SLOT"===a.tagName.toUpperCase()&&t.assignedNodes?o(t.assignedNodes()):d(t,HTMLIFrameElement)&&(null===(u=t.contentDocument)||void 0===u?void 0:u.body)?o(t.contentDocument.body.childNodes):o((null!==(c=t.shadowRoot)&&void 0!==c?c:t).childNodes)).length||d(t,HTMLVideoElement)?[2,r]:[4,e.reduce((function(t,e){return t.then((function(){return L(e,i)})).then((function(t){t&&r.appendChild(t)}))}),Promise.resolve())];case 1:return n.sent(),[2,r]}var a}))}))}(t,i,r)})).then((function(e){return A(t,e)})).then((function(t){return function(t,r){return e(this,void 0,void 0,(function(){var e,i,o,u,c,a,s,l,f,h,d,v,p;return n(this,(function(n){switch(n.label){case 0:if(0===(e=t.querySelectorAll?t.querySelectorAll("use"):[]).length)return[2,t];i={},p=0,n.label=1;case 1:return p<e.length?(o=e[p],(u=o.getAttribute("xlink:href"))?(c=t.querySelector(u),a=document.querySelector(u),c||!a||i[u]?[3,3]:(s=i,l=u,[4,L(a,r,!0)])):[3,3]):[3,4];case 2:s[l]=n.sent(),n.label=3;case 3:return p++,[3,1];case 4:if((f=Object.values(i)).length){for(h="http://www.w3.org/1999/xhtml",(d=document.createElementNS(h,"svg")).setAttribute("xmlns",h),d.style.position="absolute",d.style.width="0",d.style.height="0",d.style.overflow="hidden",d.style.display="none",v=document.createElementNS(h,"defs"),d.appendChild(v),p=0;p<f.length;p++)v.appendChild(f[p]);t.appendChild(d)}return[2,t]}}))}))}(t,r)}))]:[2,null]}))}))}var N=/url\((['"]?)([^'"]+?)\1\)/g,k=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,I=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function D(t,r,i,o,u){return e(this,void 0,void 0,(function(){var e,c,a,s;return n(this,(function(n){switch(n.label){case 0:return n.trys.push([0,5,,6]),e=i?function(t,e){if(t.match(/^[a-z]+:\/\//i))return t;if(t.match(/^\/\//))return window.location.protocol+t;if(t.match(/^[a-z]+:/i))return t;var n=document.implementation.createHTMLDocument(),r=n.createElement("base"),i=n.createElement("a");return n.head.appendChild(r),n.body.appendChild(i),e&&(r.href=e),i.href=t,i.href}(r,i):r,c=b(r),a=void 0,u?[4,u(e)]:[3,2];case 1:return s=n.sent(),a=x(s,c),[3,4];case 2:return[4,C(e,c,o)];case 3:a=n.sent(),n.label=4;case 4:return[2,t.replace((l=r,f=l.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1"),new RegExp("(url\\(['\"]?)(".concat(f,")(['\"]?\\))"),"g")),"$1".concat(a,"$3"))];case 5:return n.sent(),[3,6];case 6:return[2,t]}var l,f}))}))}function M(t){return-1!==t.search(N)}function H(t,r,i){return e(this,void 0,void 0,(function(){var e,o;return n(this,(function(n){return M(t)?(e=function(t,e){var n=e.preferredFontFormat;return n?t.replace(I,(function(t){for(;;){var e=k.exec(t)||[],r=e[0],i=e[2];if(!i)return"";if(i===n)return"src: ".concat(r,";")}})):t}(t,i),o=function(t){var e=[];return t.replace(N,(function(t,n,r){return e.push(r),t})),e.filter((function(t){return!y(t)}))}(e),[2,o.reduce((function(t,e){return t.then((function(t){return D(t,e,r,i)}))}),Promise.resolve(e))]):[2,t]}))}))}function V(t,r,i){var o;return e(this,void 0,void 0,(function(){var e,u;return n(this,(function(n){switch(n.label){case 0:return(e=null===(o=r.style)||void 0===o?void 0:o.getPropertyValue(t))?[4,H(e,null,i)]:[3,2];case 1:return u=n.sent(),r.style.setProperty(t,u,r.style.getPropertyPriority(t)),[2,!0];case 2:return[2,!1]}}))}))}function F(t,r){return e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:return[4,V("background",t,r)];case 1:return e.sent()?[3,3]:[4,V("background-image",t,r)];case 2:e.sent(),e.label=3;case 3:return[4,V("mask",t,r)];case 4:return e.sent()?[3,6]:[4,V("mask-image",t,r)];case 5:e.sent(),e.label=6;case 6:return[2]}}))}))}function j(t,r){return e(this,void 0,void 0,(function(){var e,i,o;return n(this,(function(n){switch(n.label){case 0:return(e=d(t,HTMLImageElement))&&!y(t.src)||d(t,SVGImageElement)&&!y(t.href.baseVal)?[4,C(i=e?t.src:t.href.baseVal,b(i),r)]:[2];case 1:return o=n.sent(),[4,new Promise((function(n,r){t.onload=n,t.onerror=r;var i=t;i.decode&&(i.decode=n),"lazy"===i.loading&&(i.loading="eager"),e?(t.srcset="",t.src=o):t.href.baseVal=o}))];case 2:return n.sent(),[2]}}))}))}function q(t,r){return e(this,void 0,void 0,(function(){var e,i;return n(this,(function(n){switch(n.label){case 0:return e=o(t.childNodes),i=e.map((function(t){return U(t,r)})),[4,Promise.all(i).then((function(){return t}))];case 1:return n.sent(),[2]}}))}))}function U(t,r){return e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:return d(t,Element)?[4,F(t,r)]:[3,4];case 1:return e.sent(),[4,j(t,r)];case 2:return e.sent(),[4,q(t,r)];case 3:e.sent(),e.label=4;case 4:return[2]}}))}))}var O={};function B(t){return e(this,void 0,void 0,(function(){var e,r;return n(this,(function(n){switch(n.label){case 0:return null!=(e=O[t])?[2,e]:[4,fetch(t)];case 1:return[4,n.sent().text()];case 2:return r=n.sent(),e={url:t,cssText:r},O[t]=e,[2,e]}}))}))}function z(t,r){return e(this,void 0,void 0,(function(){var i,o,u,c,a=this;return n(this,(function(s){return i=t.cssText,o=/url\(["']?([^"')]+)["']?\)/g,u=i.match(/url\([^)]+\)/g)||[],c=u.map((function(u){return e(a,void 0,void 0,(function(){var e;return n(this,(function(n){return(e=u.replace(o,"$1")).startsWith("https://")||(e=new URL(e,t.url).href),[2,S(e,r.fetchRequestInit,(function(t){var e=t.result;return i=i.replace(u,"url(".concat(e,")")),[u,e]}))]}))}))})),[2,Promise.all(c).then((function(){return i}))]}))}))}function W(t){if(null==t)return[];for(var e=[],n=t.replace(/(\/\*[\s\S]*?\*\/)/gi,""),r=new RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){if(null===(u=r.exec(n)))break;e.push(u[0])}n=n.replace(r,"");for(var i=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi,o=new RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){var u;if(null===(u=i.exec(n))){if(null===(u=o.exec(n)))break;i.lastIndex=o.lastIndex}else o.lastIndex=i.lastIndex;e.push(u[0])}return e}function $(t,r){return e(this,void 0,void 0,(function(){var e,i;return n(this,(function(n){return e=[],i=[],t.forEach((function(e){if("cssRules"in e)try{o(e.cssRules||[]).forEach((function(t,n){if(t.type===CSSRule.IMPORT_RULE){var o=n+1,u=B(t.href).then((function(t){return z(t,r)})).then((function(t){return W(t).forEach((function(t){try{e.insertRule(t,t.startsWith("@import")?o+=1:e.cssRules.length)}catch(e){console.error("Error inserting rule from remote css",{rule:t,error:e})}}))})).catch((function(t){console.error("Error loading remote css",t.toString())}));i.push(u)}}))}catch(o){var n=t.find((function(t){return null==t.href}))||document.styleSheets[0];null!=e.href&&i.push(B(e.href).then((function(t){return z(t,r)})).then((function(t){return W(t).forEach((function(t){n.insertRule(t,e.cssRules.length)}))})).catch((function(t){console.error("Error loading remote stylesheet",t)}))),console.error("Error inlining remote css file",o)}})),[2,Promise.all(i).then((function(){return t.forEach((function(t){if("cssRules"in t)try{o(t.cssRules||[]).forEach((function(t){e.push(t)}))}catch(e){console.error("Error while reading CSS rules from ".concat(t.href),e)}})),e}))]}))}))}function _(t){return t.filter((function(t){return t.type===CSSRule.FONT_FACE_RULE})).filter((function(t){return M(t.style.getPropertyValue("src"))}))}function G(t,r){return e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:if(null==t.ownerDocument)throw new Error("Provided element is not within a Document");return[4,$(o(t.ownerDocument.styleSheets),r)];case 1:return[2,_(e.sent())]}}))}))}function J(t,r){return e(this,void 0,void 0,(function(){var e;return n(this,(function(n){switch(n.label){case 0:return[4,G(t,r)];case 1:return e=n.sent(),[4,Promise.all(e.map((function(t){var e=t.parentStyleSheet?t.parentStyleSheet.href:null;return H(t.cssText,e,r)})))];case 2:return[2,n.sent().join("\n")]}}))}))}function Q(t,r){return e(this,void 0,void 0,(function(){var e,i,o,u,c;return n(this,(function(n){switch(n.label){case 0:return null==r.fontEmbedCSS?[3,1]:(i=r.fontEmbedCSS,[3,5]);case 1:return r.skipFonts?(o=null,[3,4]):[3,2];case 2:return[4,J(t,r)];case 3:o=n.sent(),n.label=4;case 4:i=o,n.label=5;case 5:return(e=i)&&(u=document.createElement("style"),c=document.createTextNode(e),u.appendChild(c),t.firstChild?t.insertBefore(u,t.firstChild):t.appendChild(u)),[2]}}))}))}function X(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){var e,i,o,u;return n(this,(function(n){switch(n.label){case 0:return e=c(t,r),i=e.width,o=e.height,[4,L(t,r,!0)];case 1:return[4,Q(u=n.sent(),r)];case 2:return n.sent(),[4,U(u,r)];case 3:return n.sent(),function(t,e){var n=t.style;e.backgroundColor&&(n.backgroundColor=e.backgroundColor),e.width&&(n.width="".concat(e.width,"px")),e.height&&(n.height="".concat(e.height,"px"));var r=e.style;null!=r&&Object.keys(r).forEach((function(t){n[t]=r[t]}))}(u,r),[4,h(u,i,o)];case 4:return[2,n.sent()]}}))}))}function K(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){var e,i,o,u,s,f,h,d,v;return n(this,(function(n){switch(n.label){case 0:return e=c(t,r),i=e.width,o=e.height,[4,X(t,r)];case 1:return[4,l(n.sent())];case 2:return u=n.sent(),s=document.createElement("canvas"),f=s.getContext("2d"),h=r.pixelRatio||function(){var t,e;try{e=process}catch(t){}var n=e&&e.env?e.env.devicePixelRatio:null;return n&&(t=parseInt(n,10),Number.isNaN(t)&&(t=1)),t||window.devicePixelRatio||1}(),d=r.canvasWidth||i,v=r.canvasHeight||o,s.width=d*h,s.height=v*h,r.skipAutoScale||function(t){(t.width>a||t.height>a)&&(t.width>a&&t.height>a?t.width>t.height?(t.height*=a/t.width,t.width=a):(t.width*=a/t.height,t.height=a):t.width>a?(t.height*=a/t.width,t.width=a):(t.width*=a/t.height,t.height=a))}(s),s.style.width="".concat(d),s.style.height="".concat(v),r.backgroundColor&&(f.fillStyle=r.backgroundColor,f.fillRect(0,0,s.width,s.height)),f.drawImage(u,0,0,s.width,s.height),[2,s]}}))}))}t.getFontEmbedCSS=function(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){return n(this,(function(e){return[2,J(t,r)]}))}))},t.toBlob=function(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:return[4,K(t,r)];case 1:return[4,s(e.sent())];case 2:return[2,e.sent()]}}))}))},t.toCanvas=K,t.toJpeg=function(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:return[4,K(t,r)];case 1:return[2,e.sent().toDataURL("image/jpeg",r.quality||1)]}}))}))},t.toPixelData=function(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){var e,i,o,u;return n(this,(function(n){switch(n.label){case 0:return e=c(t,r),i=e.width,o=e.height,[4,K(t,r)];case 1:return u=n.sent(),[2,u.getContext("2d").getImageData(0,0,i,o).data]}}))}))},t.toPng=function(t,r){return void 0===r&&(r={}),e(this,void 0,void 0,(function(){return n(this,(function(e){switch(e.label){case 0:return[4,K(t,r)];case 1:return[2,e.sent().toDataURL()]}}))}))},t.toSvg=X}));
+//# sourceMappingURL=html-to-image.js.map
+
+  </script>
+
+  <style>
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+
+    .serif-bn {
+      font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+    }
+
+    /* ID Card Fixed Dimensions (CR80 Standard Ratio Scaled) */
+    .id-card-box {
+      width: 320px;
+      height: 504px;
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.18);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      flex-shrink: 0;
+    }
+
+    /* Landscape Account Card (CR80 landscape) - সব সাইজ em এ, তাই --fs দিয়ে একসাথে বড়/ছোট হয় */
+    .wide-card-box { --fs:1.2; font-size:calc(12px * var(--fs)); width:504px; height:320px; position:relative; overflow:hidden; background:#fff; border-radius:16px; box-shadow:0 20px 35px -10px rgba(15,23,42,.18); border:1px solid rgba(226,232,240,.9); flex-shrink:0; }
+    .wrow { display:flex; gap:.5em; align-items:baseline; border-bottom:1px solid #e2e8f0; padding-bottom:.2em; }
+    .wrow.hidden { display:none !important; }
+    .wl { width:7em; flex-shrink:0; font-size:.95em; color:#64748b; font-weight:500; line-height:1.4; }
+    .wv { flex:1; min-width:0; font-size:1.15em; font-weight:600; color:#0f172a; overflow-wrap:anywhere; word-break:break-word; line-height:1.4; }
+
+    /* Certificate Fixed Dimensions (A4 Landscape Ratio) */
+    .certificate-box {
+      width: 840px;
+      min-height: 594px;
+      position: relative;
+      overflow: hidden;
+      background: #fffdf9;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.2);
+      flex-shrink: 0;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    /* Print Styles */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printableArea, #printableArea * {
+        visibility: visible;
+      }
+      #printableArea {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        transform: scale(1) !important;
+        box-shadow: none !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Top Navigation Header -->
+  <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-lg no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-md">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-lg sm:text-xl font-bold tracking-wide flex items-center gap-2">
+            আইডি ও প্রত্যয়ন স্টুডিও
+            <span class="text-xs bg-amber-500/20 text-amber-300 border border-amber-400/30 px-2 py-0.5 rounded-full font-semibold">PRO</span>
+          </h1>
+          <p class="text-xs text-slate-400">স্মার্ট আইডি কার্ড ও ডিজিটাল প্রত্যয়নপত্র জেনারেটর</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="btnResetDemo" type="button" class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs sm:text-sm font-medium border border-slate-700 transition flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          ডেমো রিসেট
+        </button>
+        <button id="btnPrint" type="button" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-medium border border-slate-700 transition flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+          </svg>
+          প্রিন্ট করুন
+        </button>
+        <button id="btnPdf" type="button" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-md transition flex items-center gap-1.5">
+          <span>📄</span><span id="pdfBtnText">PDF (A4)</span>
+        </button>
+        <button id="btnDownload" type="button" class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs sm:text-sm font-semibold shadow-md transition flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          <span id="downloadBtnText">HD ডাউনলোড</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Document Type Selector Bar -->
+  <section class="bg-white border-b border-slate-200 shadow-sm no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5" id="docTypeTabs">
+        <button type="button" data-mode="student" class="mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border transition-all">
+          <span>🎓</span> শিক্ষার্থী আইডি
+        </button>
+        <button type="button" data-mode="employee" class="mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border transition-all">
+          <span>💼</span> কর্মকর্তা / কর্মচারী
+        </button>
+        <button type="button" data-mode="member" class="mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border transition-all">
+          <span>🪪</span> সাধারণ পরিচয়পত্র
+        </button>
+        <button type="button" data-mode="certificate" class="mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border transition-all">
+          <span>📜</span> প্রত্যয়নপত্র
+        </button>
+        <button type="button" data-mode="rail" class="mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border transition-all">
+          <span>🚆</span> রেল আইডি
+        </button>
+        <button type="button" data-mode="bhumi" class="mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border transition-all">
+          <span>🌾</span> ভূমি কার্ড
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="max-w-7xl mx-auto w-full flex-1 px-4 sm:px-6 py-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+    <!-- Left Panel: Input Form & Controls -->
+    <div class="lg:col-span-5 bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden no-print">
+      <div class="bg-slate-50 px-5 py-3.5 border-b border-slate-200 flex items-center justify-between">
+        <h2 class="font-bold text-slate-800 text-base flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          তথ্য ও ডিজাইন কাস্টমাইজেশন
+        </h2>
+        <span id="activeModeBadge" class="text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-50 text-blue-700">শিক্ষার্থী মোড</span>
+      </div>
+
+      <div class="p-5 space-y-6 max-h-[calc(100vh-220px)] overflow-y-auto">
+
+        <!-- 1. Theme & Visual Settings -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">১. প্রিমিয়াম কালার থিম নির্বাচন করুন</label>
+          <div class="grid grid-cols-5 gap-2" id="themeSelector">
+            <button type="button" data-theme="royal" class="theme-btn h-10 rounded-xl bg-gradient-to-br from-blue-700 to-indigo-900 ring-2 ring-offset-2 ring-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-sm" title="রয়্যাল ব্লু">ব্লু</button>
+            <button type="button" data-theme="emerald" class="theme-btn h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-900 flex items-center justify-center text-white text-xs font-bold shadow-sm" title="এমেরাল্ড গ্রিন">গ্রিন</button>
+            <button type="button" data-theme="crimson" class="theme-btn h-10 rounded-xl bg-gradient-to-br from-rose-600 to-red-900 flex items-center justify-center text-white text-xs font-bold shadow-sm" title="ক্রিমসন রেড">রেড</button>
+            <button type="button" data-theme="gold" class="theme-btn h-10 rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-amber-700 flex items-center justify-center text-amber-300 text-xs font-bold shadow-sm" title="মিডনাইট গোল্ড">গোল্ড</button>
+            <button type="button" data-theme="purple" class="theme-btn h-10 rounded-xl bg-gradient-to-br from-purple-700 to-fuchsia-950 flex items-center justify-center text-white text-xs font-bold shadow-sm" title="পার্পল এলিগ্যান্স">পার্পল</button>
+          </div>
+        </div>
+
+        <!-- 2. Organization / Institution Info -->
+        <div class="space-y-3 pt-2 border-t border-slate-100">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">২. প্রতিষ্ঠান বা সংস্থার তথ্য</label>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">প্রতিষ্ঠানের নাম <span class="text-rose-500">*</span></label>
+            <input type="text" data-field="orgName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="প্রতিষ্ঠানের নাম লিখুন" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">স্লোগান / উপ-শিরোনাম / EIIN</label>
+              <input type="text" data-field="orgSub" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="স্থাপিত: ২০১০ | EIIN: 108234" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">প্রতিষ্ঠানের ঠিকানা</label>
+              <input type="text" data-field="orgAddress" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="ধানমন্ডি, ঢাকা-১২০৫" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">হেল্পলাইন / অফিস ফোন</label>
+              <input type="text" data-field="orgPhone" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="+৮৮০ ১৭১১-০০০০০০" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">ইমেইল / ওয়েবসাইট</label>
+              <input type="text" data-field="orgWeb" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="www.example.edu.bd" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Personal Details -->
+        <div id="personalSection" class="space-y-3 pt-2 border-t border-slate-100">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">৩. ব্যক্তিগত তথ্য</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label id="lblPersonName" class="block text-sm font-medium text-slate-700 mb-1">পূর্ণ নাম <span class="text-rose-500">*</span></label>
+              <input type="text" data-field="personName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label id="lblIdNumber" class="block text-sm font-medium text-slate-700 mb-1">আইডি / রোল নম্বর <span class="text-rose-500">*</span></label>
+              <input type="text" data-field="idNumber" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label id="lblRoleOrClass" class="block text-sm font-medium text-slate-700 mb-1">শ্রেণি / পদবী</label>
+              <input type="text" data-field="roleOrClass" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label id="lblDeptOrSection" class="block text-sm font-medium text-slate-700 mb-1">বিভাগ / শাখা</label>
+              <input type="text" data-field="deptOrSection" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+
+          <!-- Extra Fields for Parent / Guardian (Used in Student & Certificate) -->
+          <div id="parentFieldsGroup" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">পিতার নাম</label>
+              <input type="text" data-field="fatherName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">মাতার নাম</label>
+              <input type="text" data-field="motherName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">রক্তের গ্রুপ</label>
+              <select data-field="bloodGroup" class="form-input w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                <option value="A+ (পজিটিভ)">A+ (পজিটিভ)</option>
+                <option value="A- (নেগেটিভ)">A- (নেগেটিভ)</option>
+                <option value="B+ (পজিটিভ)">B+ (পজিটিভ)</option>
+                <option value="B- (নেগেটিভ)">B- (নেগেটিভ)</option>
+                <option value="O+ (পজিটিভ)">O+ (পজিটিভ)</option>
+                <option value="O- (নেগেটিভ)">O- (নেগেটিভ)</option>
+                <option value="AB+ (পজিটিভ)">AB+ (পজিটিভ)</option>
+                <option value="AB- (নেগেটিভ)">AB- (নেগেটিভ)</option>
+              </select>
+            </div>
+            <div>
+              <label id="lblPhone" class="block text-sm font-medium text-slate-700 mb-1">মোবাইল নম্বর</label>
+              <input type="text" data-field="personPhone" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <label id="lblDateInfo" class="block text-sm font-medium text-slate-700 mb-1">মেয়াদ / শিক্ষাবর্ষ</label>
+              <input type="text" data-field="validityOrSession" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">ইস্যু তারিখ / জন্ম তারিখ</label>
+              <input type="text" data-field="issueDate" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">স্থায়ী / বর্তমান ঠিকানা</label>
+              <input type="text" data-field="personAddress" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Certificate Specific Section (Hidden in ID Card modes) -->
+        <div id="certificateCustomGroup" class="space-y-3 pt-2 border-t border-slate-100 hidden">
+          <div class="flex items-center justify-between">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">৪. প্রত্যয়নপত্রের বিবরণ</label>
+            <button type="button" id="btnAutoGenerateCertText" class="text-xs text-blue-600 hover:text-blue-800 font-semibold underline">অটো টেক্সট জেনারেট করুন</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">স্মারক নম্বর</label>
+              <input type="text" data-field="certRefNo" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">প্রত্যয়নপত্রের শিরোনাম</label>
+              <input type="text" data-field="certTitle" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1">মূল বক্তব্য (ইচ্ছেমতো এডিট করা যাবে)</label>
+            <textarea data-field="certBody" rows="4" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none leading-relaxed"></textarea>
+          </div>
+        </div>
+
+        <!-- 4B. Rail / Bhumi Account Card Details -->
+        <div id="accountSection" class="space-y-3 pt-2 border-t border-slate-100 hidden">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">৪. অ্যাকাউন্ট কার্ডের তথ্য</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">কার্ডের শিরোনাম</label>
+              <input type="text" data-field="wideTitle" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">উপ-শিরোনাম</label>
+              <input type="text" data-field="wideSub" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">গ্রাহকের নাম</label>
+              <input type="text" data-field="accName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">মোবাইল নম্বর (ফাঁকা রাখলে লুকাবে)</label>
+              <input type="text" data-field="accMobile" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">ইমেইল (ফাঁকা রাখলে লুকাবে)</label>
+              <input type="text" data-field="accEmail" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">ইউজার আইডি (ফাঁকা রাখলে লুকাবে)</label>
+              <input type="text" data-field="accUser" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">পাসওয়ার্ড</label>
+              <input type="text" data-field="accPass" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">পোর্টাল লিংক (QR এ যাবে)</label>
+              <input type="text" data-field="accUrl" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="https://" />
+            </div>
+          </div>
+          <div class="space-y-3 pt-3 border-t border-slate-100">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">কার্ডের লেখা ও সাইজ কাস্টমাইজ</label>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">লেখার সাইজ: <b id="fsValue">120%</b></label>
+              <input type="range" id="fsRange" min="70" max="180" step="5" value="120" class="w-full" />
+              <p class="text-xs text-slate-500 mt-1">লেখা কার্ডের বাইরে চলে গেলে নিজে নিজে ছোট হয়ে কার্ডের ভেতরে ঢুকে যাবে।</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"নাম" লেবেল</label>
+              <input type="text" data-field="wlName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"মোবাইল" লেবেল</label>
+              <input type="text" data-field="wlMobile" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"ইমেইল" লেবেল</label>
+              <input type="text" data-field="wlEmail" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"ইউজার আইডি" লেবেল</label>
+              <input type="text" data-field="wlUser" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"পাসওয়ার্ড" লেবেল</label>
+              <input type="text" data-field="wlPass" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">কোণার ব্যাজ (ফাঁকা রাখলে লুকাবে)</label>
+              <input type="text" data-field="wideBadge" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">QR এর নিচের লেখা</label>
+              <input type="text" data-field="wideQrCap" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"সেবা প্রদানকারী" লেবেল</label>
+              <input type="text" data-field="wideProvLbl" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">নিচের নোট / সতর্কবার্তা</label>
+              <textarea data-field="wideDisclaimer" rows="2" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none leading-relaxed"></textarea>
+            </div>
+            <label class="flex items-center gap-2 text-sm text-slate-700 cursor-pointer">
+              <input type="checkbox" id="chkDisc" checked /> নিচের নোটটি কার্ডে দেখান
+            </label>
+          </div>
+          <label class="flex items-start gap-2 text-sm text-slate-700 bg-amber-50 border border-amber-200 rounded-xl p-3 cursor-pointer">
+            <input type="checkbox" id="chkMaskPass" class="mt-1" />
+            <span>পাসওয়ার্ড লুকিয়ে (••••) দেখান<span class="block text-xs text-slate-500">কার্ড হারালে অ্যাকাউন্ট ঝুঁকিতে পড়তে পারে, তাই নিরাপদ রাখতে চাইলে এটি চালু করুন।</span></span>
+          </label>
+        </div>
+
+        <!-- 5. Authority & Back Side Terms -->
+        <div id="signSection" class="space-y-3 pt-2 border-t border-slate-100">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">৫. স্বাক্ষরকারী ও শর্তাবলী</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">স্বাক্ষরকারীর নাম / লেখা</label>
+              <input type="text" data-field="signatoryName" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">স্বাক্ষরকারীর পদবী</label>
+              <input type="text" data-field="signatoryTitle" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+          <div id="termsFieldGroup">
+            <label class="block text-sm font-medium text-slate-700 mb-1">পেছনের অংশের নির্দেশনা (Back Side Notice)</label>
+            <textarea data-field="cardTerms" rows="2" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+          </div>
+        </div>
+
+        <!-- 6A. ID card label customisation -->
+        <div id="idLabelSection" class="space-y-3 pt-2 border-t border-slate-100">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">কার্ডের লেবেল ও লেখা কাস্টমাইজ</label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"পিতার নাম" লেবেল</label>
+              <input type="text" data-field="lblFatherT" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"রক্তের গ্রুপ" লেবেল</label>
+              <input type="text" data-field="lblBloodT" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"মোবাইল" লেবেল</label>
+              <input type="text" data-field="lblMobileT" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"মেয়াদ / সেশন" লেবেল</label>
+              <input type="text" data-field="lblValidT" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">পেছনের শিরোনাম</label>
+              <input type="text" data-field="backTitle" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"ঠিকানা" লেবেল</label>
+              <input type="text" data-field="backAddrLbl" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"ইস্যু তারিখ" লেবেল</label>
+              <input type="text" data-field="backIssueLbl" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">"নির্দেশনাবলী" লেবেল</label>
+              <input type="text" data-field="backTermsLbl" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+          </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">QR এর নিচের লেখা</label>
+              <input type="text" data-field="qrCapId" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-1">কার্ড পাওয়া গেলে লেখা</label>
+              <input type="text" data-field="foundText" class="form-input w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+            </div>
+        </div>
+
+        <!-- 6. Media Uploads (Photo, Logo, Signature) -->
+        <div class="space-y-3 pt-2 border-t border-slate-100">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-500">৬. ছবি, লোগো ও স্বাক্ষর আপলোড</label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <!-- Profile Photo Upload -->
+            <label class="cursor-pointer border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-xl p-2.5 text-center transition bg-slate-50/60 hover:bg-blue-50/40 flex flex-col items-center justify-center">
+              <span class="text-xs font-semibold text-slate-700">📸 ব্যক্তির ছবি</span>
+              <span class="text-[11px] text-slate-400 mt-0.5">পাসপোর্ট সাইজ</span>
+              <input type="file" id="uploadPhoto" accept="image/*" class="hidden" />
+            </label>
+
+            <!-- Org Logo Upload -->
+            <label class="cursor-pointer border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-xl p-2.5 text-center transition bg-slate-50/60 hover:bg-blue-50/40 flex flex-col items-center justify-center">
+              <span class="text-xs font-semibold text-slate-700">🏛️ প্রতিষ্ঠানের লোগো</span>
+              <span class="text-[11px] text-slate-400 mt-0.5">PNG / স্বচ্ছ লোগো</span>
+              <input type="file" id="uploadLogo" accept="image/*" class="hidden" />
+            </label>
+
+            <!-- Signature Upload -->
+            <label class="cursor-pointer border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-xl p-2.5 text-center transition bg-slate-50/60 hover:bg-blue-50/40 flex flex-col items-center justify-center">
+              <span class="text-xs font-semibold text-slate-700">✍️ ডিজিটাল স্বাক্ষর</span>
+              <span class="text-[11px] text-slate-400 mt-0.5">অপশনাল ছবি</span>
+              <input type="file" id="uploadSign" accept="image/*" class="hidden" />
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right Panel: Live Preview Canvas -->
+    <div class="lg:col-span-7 flex flex-col items-center">
+      <!-- Preview Toolbar -->
+      <div class="w-full bg-white rounded-2xl shadow-sm border border-slate-200/80 px-4 py-3 mb-4 flex flex-wrap items-center justify-between gap-2 no-print">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-sm font-bold text-slate-700">লাইভ প্রিভিউ ক্যানভাস</span>
+        </div>
+
+        <!-- Front/Back View Filter (Only for ID Cards) -->
+        <div id="cardViewControls" class="flex items-center bg-slate-100 p-1 rounded-xl">
+          <button type="button" data-view="both" class="view-btn px-3 py-1 rounded-lg text-xs font-semibold bg-white text-slate-800 shadow-sm transition">উভয় পাশ</button>
+          <button type="button" data-view="front" class="view-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 transition">সামনের অংশ</button>
+          <button type="button" data-view="back" class="view-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 transition">পেছনের অংশ</button>
+        </div>
+      </div>
+
+      <!-- Responsive Preview Container -->
+      <div id="previewViewport" class="w-full flex justify-center items-start overflow-x-auto py-4 px-2">
+        <div id="printableArea" class="transition-transform origin-top flex flex-wrap justify-center items-start gap-6">
+
+          <!-- ================= 1. ID CARD FRONT SIDE ================= -->
+          <div id="idCardFront" class="id-card-box flex flex-col justify-between select-none">
+            <!-- Top Decorative Header -->
+            <div id="frontHeaderBg" class="relative pt-5 pb-14 px-4 text-white text-center rounded-b-[42px] shadow-md transition-colors">
+              <div class="flex items-center justify-center gap-2.5">
+                <img id="prevLogoFront" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo" class="w-10 h-10 rounded-full bg-white p-1 object-contain shadow-sm shrink-0" />
+                <div class="text-left">
+                  <h3 id="prevOrgNameFront" class="font-bold text-[15px] leading-snug"></h3>
+                  <p id="prevOrgSubFront" class="text-[10px] opacity-90"></p>
+                </div>
+              </div>
+              <!-- Card Type Pill -->
+              <div class="mt-2">
+                <span id="prevCardBadge" class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-white/20 border border-white/30 leading-normal"></span>
+              </div>
+            </div>
+
+            <!-- Profile Photo Overlapping Header -->
+            <div class="relative -mt-12 flex flex-col items-center px-5">
+              <div id="photoRing" class="w-24 h-24 rounded-full p-1 bg-white shadow-lg ring-4 transition-all">
+                <img id="prevPhoto" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Profile" class="w-full h-full rounded-full object-cover bg-slate-100" />
+              </div>
+              <h2 id="prevPersonName" class="mt-2.5 text-lg font-bold text-slate-900 text-center leading-snug"></h2>
+              <p id="prevRoleOrClass" class="text-xs font-semibold px-3 py-0.5 rounded-full mt-1"></p>
+            </div>
+
+            <!-- Key Details Table -->
+            <div class="px-5 my-2 flex-1 flex flex-col justify-center">
+              <div class="bg-slate-50/90 border border-slate-200/80 rounded-xl p-3 space-y-1.5 text-[12px]">
+                <div class="flex justify-between border-b border-slate-200/60 pb-1">
+                  <span id="prevLblId" class="text-slate-500 font-medium">আইডি নং:</span>
+                  <span id="prevIdNumber" class="font-bold text-slate-800"></span>
+                </div>
+                <div class="flex justify-between border-b border-slate-200/60 pb-1">
+                  <span id="prevLblDept" class="text-slate-500 font-medium">বিভাগ / শাখা:</span>
+                  <span id="prevDept" class="font-semibold text-slate-800"></span>
+                </div>
+                <div id="frontFatherRow" class="flex justify-between border-b border-slate-200/60 pb-1">
+                  <span id="prevLblFather" class="text-slate-500 font-medium">পিতার নাম:</span>
+                  <span id="prevFather" class="font-semibold text-slate-800 text-right max-w-[170px] leading-snug"></span>
+                </div>
+                <div class="flex justify-between border-b border-slate-200/60 pb-1">
+                  <span id="prevLblBlood" class="text-slate-500 font-medium">রক্তের গ্রুপ:</span>
+                  <span id="prevBlood" class="font-bold text-rose-600"></span>
+                </div>
+                <div class="flex justify-between">
+                  <span id="prevLblMobile" class="text-slate-500 font-medium">মোবাইল:</span>
+                  <span id="prevPhone" class="font-semibold text-slate-800"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Signature & Validity Bar -->
+            <div class="px-5 pt-1 pb-2 flex items-end justify-between">
+              <div>
+                <p id="prevLblValid" class="text-[10px] text-slate-400">মেয়াদ / সেশন</p>
+                <p id="prevValidity" class="text-xs font-bold text-slate-700"></p>
+              </div>
+              <div class="text-center">
+                <img id="prevSignFront" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Sign" class="h-6 mx-auto object-contain mb-0.5 hidden" />
+                <div id="prevSignTextFront" class="text-xs italic font-semibold text-slate-700"></div>
+                <div class="w-24 border-t border-slate-400 pt-0.5">
+                  <p id="prevSignTitleFront" class="text-[10px] font-semibold text-slate-600"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Accent Strip -->
+            <div id="frontFooterStrip" class="h-2.5 w-full"></div>
+          </div>
+
+          <!-- ================= 2. ID CARD BACK SIDE ================= -->
+          <div id="idCardBack" class="id-card-box flex flex-col justify-between select-none">
+            <!-- Top Accent Strip -->
+            <div id="backHeaderStrip" class="h-3.5 w-full"></div>
+
+            <div class="px-5 pt-4 pb-3 flex-1 flex flex-col justify-between">
+              <!-- Top Section: Emergency & Address -->
+              <div class="space-y-2.5">
+                <div class="text-center border-b border-slate-200 pb-2">
+                  <h4 id="prevBackTitle" class="text-xs font-bold text-slate-500 leading-snug">বিস্তারিত ও জরুরি যোগাযোগ</h4>
+                </div>
+
+                <div class="bg-slate-50 rounded-xl p-3 border border-slate-200/80 space-y-1.5 text-xs">
+                  <div>
+                    <span id="prevBackAddrLbl" class="text-slate-400 block text-[10px]">স্থায়ী / বর্তমান ঠিকানা:</span>
+                    <span id="prevAddressBack" class="font-semibold text-slate-700"></span>
+                  </div>
+                  <div class="flex justify-between pt-1 border-t border-slate-200/60">
+                    <span id="prevBackIssueLbl" class="text-slate-400">ইস্যু তারিখ:</span>
+                    <span id="prevIssueDateBack" class="font-semibold text-slate-700"></span>
+                  </div>
+                </div>
+
+                <!-- Terms & Instructions -->
+                <div class="px-1">
+                  <p id="prevBackTermsLbl" class="text-[11px] font-bold text-slate-700 mb-1">নির্দেশনাবলী:</p>
+                  <p id="prevTermsBack" class="text-[11px] text-slate-600 leading-relaxed bg-amber-50/70 border border-amber-200/70 rounded-lg p-2.5"></p>
+                </div>
+              </div>
+
+              <!-- Middle: Dynamic QR Code -->
+              <div class="flex flex-col items-center my-2">
+                <div class="p-2 bg-white rounded-xl border border-slate-200 shadow-sm">
+                  <canvas id="qrCanvasCard" width="96" height="96" class="w-24 h-24"></canvas>
+                </div>
+                <span id="prevQrCapId" class="text-[10px] text-slate-400 mt-1">তথ্য যাচাই করতে QR কোড স্ক্যান করুন</span>
+              </div>
+
+              <!-- Return Address Footer -->
+              <div class="text-center border-t border-slate-200 pt-2.5">
+                <p id="prevFoundText" class="text-[10px] text-slate-400">কার্ডটি পাওয়া গেলে নিচের ঠিকানায় যোগাযোগের অনুরোধ করা হলো:</p>
+                <p id="prevOrgNameBack" class="text-xs font-bold text-slate-800 mt-0.5"></p>
+                <p id="prevOrgAddressBack" class="text-[11px] text-slate-600"></p>
+                <p id="prevOrgContactBack" class="text-[11px] font-semibold text-slate-700 mt-0.5"></p>
+              </div>
+            </div>
+
+            <!-- Bottom Accent Strip -->
+            <div id="backFooterStrip" class="h-2.5 w-full"></div>
+          </div>
+
+          <!-- ================= LANDSCAPE ACCOUNT CARD (RAIL / BHUMI) ================= -->
+          <div id="wideCard" class="wide-card-box hidden flex flex-col select-none">
+            <div id="wideHeader" class="shrink-0 flex items-center gap-3 text-white" style="padding:10px 16px;min-height:72px">
+              <img id="prevWideLogo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo" class="rounded-full bg-white p-1 object-contain shrink-0" style="width:3.6em;height:3.6em" />
+              <div class="min-w-0 flex-1">
+                <h3 id="prevWideTitle" class="font-bold" style="font-size:1.55em;line-height:1.35"></h3>
+                <p id="prevWideSub" style="font-size:.9em;opacity:.92;line-height:1.35"></p>
+              </div>
+              <span id="prevWideBadge" class="shrink-0 font-bold bg-white/20 border border-white/30 rounded-full" style="font-size:.7em;padding:.25em .9em;line-height:1.4"></span>
+            </div>
+            <div id="wideBody" class="flex-1 min-h-0 flex gap-3 px-4 py-2">
+              <div id="wideLeft" class="flex-1 min-w-0 flex flex-col justify-center" style="gap:.5em">
+                <div id="wRowName" class="wrow"><span id="prevWLName" class="wl">নাম:</span><span id="prevWName" class="wv" style="font-size:1.25em;font-weight:700"></span></div>
+                <div id="wRowMobile" class="wrow"><span id="prevWLMobile" class="wl">মোবাইল:</span><span id="prevWMobile" class="wv"></span></div>
+                <div id="wRowEmail" class="wrow"><span id="prevWLEmail" class="wl">ইমেইল:</span><span id="prevWEmail" class="wv"></span></div>
+                <div id="wRowUser" class="wrow"><span id="prevWLUser" class="wl">ইউজার আইডি:</span><span id="prevWUser" class="wv"></span></div>
+                <div id="wRowPass" class="wrow"><span id="prevWLPass" class="wl">পাসওয়ার্ড:</span><span id="prevWPass" class="wv" style="font-family:monospace;color:#b91c1c;font-weight:700"></span></div>
+              </div>
+              <div class="shrink-0 flex flex-col items-center justify-center" style="width:112px">
+                <div class="p-1.5 bg-white rounded-lg border border-slate-200 shadow-sm">
+                  <canvas id="qrCanvasWide" width="96" height="96" class="w-24 h-24"></canvas>
+                </div>
+                <span id="prevWQrCap" class="text-slate-500 text-center" style="font-size:.7em;line-height:1.35;margin-top:.3em"></span>
+              </div>
+            </div>
+            <div id="wideFoot" class="shrink-0 px-4 pb-2">
+              <div id="prevWProvRow" class="text-slate-600" style="font-size:.78em;line-height:1.4"><span id="prevWProvLbl"></span><b id="prevWProvider"></b><span id="prevWHelp"></span></div>
+              <div id="prevWDisc" class="text-amber-800 bg-amber-50 border border-amber-200 rounded" style="font-size:.72em;line-height:1.4;padding:.3em .6em;margin-top:.3em"></div>
+            </div>
+            <div id="wideStrip" class="h-2 shrink-0"></div>
+          </div>
+
+          <!-- ================= 3. CERTIFICATE / POTTOYON POTRO ================= -->
+          <div id="certificateCard" class="certificate-box hidden p-6 select-none">
+            <!-- Outer & Inner Ornamental Border -->
+            <div id="certOuterBorder" class="w-full h-full border-[6px] rounded-xl p-2 relative flex flex-col justify-between min-h-[546px]">
+              <div id="certInnerBorder" class="w-full h-full border-2 border-dashed rounded-lg p-7 relative flex flex-col justify-between flex-1 bg-white/95">
+
+                <!-- Watermark Logo in Center -->
+                <img id="prevCertWatermark" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="w-64 h-64 object-contain opacity-[0.05] absolute inset-0 m-auto pointer-events-none" />
+
+                <!-- Certificate Header -->
+                <div class="relative z-10">
+                  <div class="flex items-center justify-between border-b-2 pb-4" id="certHeaderDivider">
+                    <div class="flex items-center gap-4">
+                      <img id="prevLogoCert" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo" class="w-16 h-16 rounded-full object-contain border border-slate-200 p-1 bg-white shadow-sm" />
+                      <div>
+                        <h2 id="prevOrgNameCert" class="serif-bn text-2xl font-bold leading-snug"></h2>
+                        <p id="prevOrgSubCert" class="text-xs font-semibold text-slate-600 mt-0.5"></p>
+                        <p id="prevOrgAddressCert" class="text-xs text-slate-500"></p>
+                      </div>
+                    </div>
+                    <!-- Right Top: Applicant Photo -->
+                    <div class="flex flex-col items-end">
+                      <img id="prevPhotoCert" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Applicant" class="w-20 h-24 object-cover rounded-lg border-2 border-slate-300 shadow-sm bg-slate-50" />
+                    </div>
+                  </div>
+
+                  <!-- Ref No & Date Row -->
+                  <div class="flex justify-between items-center text-xs font-semibold text-slate-600 mt-3">
+                    <div>স্মারক নং: <span id="prevCertRef" class="text-slate-900 font-bold"></span></div>
+                    <div>তারিখ: <span id="prevCertDate" class="text-slate-900 font-bold"></span></div>
+                  </div>
+                </div>
+
+                <!-- Certificate Title & Body Content -->
+                <div class="relative z-10 my-6 text-center px-4">
+                  <div class="inline-block">
+                    <h3 id="prevCertTitle" class="serif-bn text-2xl font-bold px-8 py-1.5 rounded-full text-white shadow-sm"></h3>
+                  </div>
+
+                  <p id="prevCertBody" class="serif-bn text-[16px] text-slate-800 leading-[2] text-justify mt-6 font-medium"></p>
+
+                  <!-- Quick Summary Info Grid -->
+                  <div class="mt-5 grid grid-cols-3 gap-3 bg-slate-50 border border-slate-200/90 rounded-xl p-3 text-left text-xs">
+                    <div><span class="text-slate-400">আইডি / রোল:</span> <strong id="prevCertId" class="text-slate-800 ml-1"></strong></div>
+                    <div><span class="text-slate-400">শ্রেণি / পদবী:</span> <strong id="prevCertRole" class="text-slate-800 ml-1"></strong></div>
+                    <div><span class="text-slate-400">রক্তের গ্রুপ:</span> <strong id="prevCertBlood" class="text-rose-600 ml-1"></strong></div>
+                  </div>
+                </div>
+
+                <!-- Certificate Footer: QR Code, Seal, Signature -->
+                <div class="relative z-10 flex items-end justify-between pt-4 border-t border-slate-200">
+                  <div class="flex items-center gap-3">
+                    <div class="p-1.5 bg-white border border-slate-200 rounded-lg shadow-sm">
+                      <canvas id="qrCanvasCert" width="70" height="70" class="w-16 h-16"></canvas>
+                    </div>
+                    <div class="text-[11px] text-slate-500 leading-snug">
+                      <p class="font-bold text-slate-700">ডিজিটাল ভেরিফিকেশন</p>
+                      <p>কিউআর কোড স্ক্যান করে</p>
+                      <p>সত্যতা যাচাই করুন</p>
+                    </div>
+                  </div>
+
+                  <!-- Official Round Seal Stamp -->
+                  <div id="certStampBadge" class="w-20 h-20 rounded-full border-2 border-dashed flex flex-col items-center justify-center text-center p-2 opacity-75 rotate-[-10deg]">
+                    <span class="text-[9px] font-bold uppercase tracking-wider">Official Seal</span>
+                    <span class="text-[10px] font-extrabold leading-tight mt-0.5">অনুমোদিত সনদ</span>
+                  </div>
+
+                  <!-- Authorized Signature -->
+                  <div class="text-center min-w-[170px]">
+                    <img id="prevSignCert" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Signature" class="h-9 mx-auto object-contain mb-1 hidden" />
+                    <div id="prevSignTextCert" class="text-sm italic font-bold text-slate-800 mb-1"></div>
+                    <div class="border-t-2 border-slate-700 pt-1">
+                      <p id="prevSignTitleCert" class="text-xs font-bold text-slate-800"></p>
+                      <p id="prevOrgNameSign" class="text-[11px] text-slate-500"></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Application Script -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Default SVG Placeholders (Data URLs so html2canvas renders offline with zero CORS issues)
+      const DEFAULT_AVATAR = "data:image/svg+xml;utf8," + encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <rect width="200" height="200" fill="#e2e8f0"/>
+          <circle cx="100" cy="78" r="38" fill="#64748b"/>
+          <path d="M35 185 C35 135 165 135 165 185 Z" fill="#64748b"/>
+        </svg>
+      `);
+
+      const DEFAULT_LOGO = "data:image/svg+xml;utf8," + encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="56" fill="#1e3a8a" stroke="#93c5fd" stroke-width="6"/>
+          <path d="M60 22 L92 40 L60 58 L28 40 Z" fill="#ffffff"/>
+          <path d="M38 52 L38 78 C38 86 82 86 82 78 L82 52 L60 64 Z" fill="#bfdbfe"/>
+        </svg>
+      `);
+
+      // Color Themes Configuration
+      const THEMES = {
+        royal: {
+          headerGrad: 'linear-gradient(135deg, #1d4ed8 0%, #1e1b4b 100%)',
+          primary: '#1d4ed8',
+          secondary: '#dbeafe',
+          textAccent: '#1e40af',
+          borderHex: '#1d4ed8'
+        },
+        emerald: {
+          headerGrad: 'linear-gradient(135deg, #059669 0%, #064e3b 100%)',
+          primary: '#059669',
+          secondary: '#d1fae5',
+          textAccent: '#065f46',
+          borderHex: '#059669'
+        },
+        crimson: {
+          headerGrad: 'linear-gradient(135deg, #e11d48 0%, #7f1d1d 100%)',
+          primary: '#e11d48',
+          secondary: '#ffe4e6',
+          textAccent: '#9f1239',
+          borderHex: '#e11d48'
+        },
+        gold: {
+          headerGrad: 'linear-gradient(135deg, #0f172a 0%, #451a03 100%)',
+          primary: '#b45309',
+          secondary: '#fef3c7',
+          textAccent: '#92400e',
+          borderHex: '#b45309'
+        },
+        purple: {
+          headerGrad: 'linear-gradient(135deg, #7e22ce 0%, #3b0764 100%)',
+          primary: '#7e22ce',
+          secondary: '#f3e8ff',
+          textAccent: '#6b21a8',
+          borderHex: '#7e22ce'
+        }
+      };
+
+      // Mode Presets for Student, Employee, Member & Certificate
+      const MODE_PRESETS = {
+        student: {
+          modeBadge: 'শিক্ষার্থী মোড',
+          cardBadge: 'শিক্ষার্থী পরিচয়পত্র',
+          lblName: 'শিক্ষার্থীর নাম *',
+          lblId: 'রোল / স্টুডেন্ট আইডি *',
+          lblRole: 'শ্রেণি / বর্ষ',
+          lblDept: 'বিভাগ / শাখা',
+          lblDate: 'শিক্ষাবর্ষ / মেয়াদ',
+          orgName: 'ঢাকা আইডিয়াল বিজ্ঞান কলেজ',
+          orgSub: 'স্থাপিত: ২০০৮ | EIIN: 108452',
+          orgAddress: 'বাড়ি-১৪, রোড-৫, ধানমন্ডি, ঢাকা-১২০৫',
+          orgPhone: '+৮৮০ ১৭১১-২২৩৩৪৪',
+          orgWeb: 'www.dhakaidealcollege.edu.bd',
+          personName: 'তানভীর আহমেদ রাহাত',
+          idNumber: 'STD-2026-109',
+          roleOrClass: 'একাদশ শ্রেণি',
+          deptOrSection: 'বিজ্ঞান বিভাগ (প্রভাতী)',
+          fatherName: 'মোঃ কামরুল হাসান',
+          motherName: 'রোকেয়া বেগম',
+          bloodGroup: 'O+ (পজিটিভ)',
+          personPhone: '০১৭১২-৩৪৫৬৭৮',
+          validityOrSession: '২০২৫ - ২০২৬',
+          issueDate: '১৪ অক্টোবর ২০২৬',
+          personAddress: 'মিরপুর-১০, ঢাকা-১২১৬',
+          signatoryName: 'প্রফেসর ড. মাহবুবুর রহমান',
+          signatoryTitle: 'অধ্যক্ষ',
+          cardTerms: 'এই পরিচয়পত্রটি প্রতিষ্ঠানের নিজস্ব সম্পত্তি। কার্ডটি হারিয়ে গেলে তাৎক্ষণিক কর্তৃপক্ষকে অবহিত করুন।'
+        },
+        employee: {
+          modeBadge: 'কর্মকর্তা / কর্মচারী মোড',
+          cardBadge: 'অফিসিয়াল আইডি কার্ড',
+          lblName: 'কর্মকর্তার নাম *',
+          lblId: 'এমপ্লয়ি আইডি *',
+          lblRole: 'পদবী (Designation)',
+          lblDept: 'ডিপার্টমেন্ট / শাখা',
+          lblDate: 'কার্ডের মেয়াদ',
+          orgName: 'নেক্সটজেন টেকনোলজিস লিমিটেড',
+          orgSub: 'আইএসও ৯০০১:২০১৫ সনদপ্রাপ্ত প্রতিষ্ঠান',
+          orgAddress: 'গুলশান অ্যাভিনিউ, ঢাকা-১২১২',
+          orgPhone: '+৮৮০ ১৯১১-৮৮৯৯০০',
+          orgWeb: 'www.nextgentech.com.bd',
+          personName: 'সাদিয়া ইসলাম নিশাত',
+          idNumber: 'EMP-4082',
+          roleOrClass: 'সিনিয়র সফটওয়্যার ইঞ্জিনিয়ার',
+          deptOrSection: 'প্রোডাক্ট ডেভেলপমেন্ট',
+          fatherName: 'আব্দুস সালাম',
+          motherName: 'নাজমা সুলতানা',
+          bloodGroup: 'B+ (পজিটিভ)',
+          personPhone: '০১৮১৯-৫৫৬৬৭৭',
+          validityOrSession: 'ডিসেম্বর ২০২৮ পর্যন্ত',
+          issueDate: '০১ জানুয়ারি ২০২৬',
+          personAddress: 'উত্তরা সেক্টর-৭, ঢাকা-১২৩০',
+          signatoryName: 'ইঞ্জি. শাফিন চৌধুরী',
+          signatoryTitle: 'ব্যবস্থাপনা পরিচালক',
+          cardTerms: 'অফিস চলাকালীন সময়ে এই কার্ডটি প্রদর্শন করা বাধ্যতামূলক। চাকরি ত্যাগ বা বদলি হলে কার্ডটি এইচআর বিভাগে জমা দিন।'
+        },
+        member: {
+          modeBadge: 'সাধারণ পরিচয়পত্র মোড',
+          cardBadge: 'সদস্য পরিচয়পত্র',
+          lblName: 'সদস্যের নাম *',
+          lblId: 'সদস্য আইডি নং *',
+          lblRole: 'সদস্যের ধরন / পদবী',
+          lblDept: 'জোন / ইউনিট',
+          lblDate: 'মেয়াদকাল',
+          orgName: 'উত্তরণ যুব কল্যাণ ফাউন্ডেশন',
+          orgSub: 'গভঃ রেজিঃ নং: ঢ-০৯৪৫২',
+          orgAddress: 'কলেজ রোড, কুমিল্লা সদর',
+          orgPhone: '+৮৮০ ১৬১১-৩৩৪৪৫৫',
+          orgWeb: 'www.uttoronfoundation.org',
+          personName: 'মোঃ আরিফুল ইসলাম',
+          idNumber: 'MEM-7721',
+          roleOrClass: 'আজীবন সদস্য ও সমন্বয়ক',
+          deptOrSection: 'কেন্দ্রীয় কার্যনির্বাহী পরিষদ',
+          fatherName: 'আলহাজ্ব রফিকুল ইসলাম',
+          motherName: 'মরিয়ম আক্তার',
+          bloodGroup: 'A+ (পজিটিভ)',
+          personPhone: '০১৫৫২-৯৯৮৮৭৭',
+          validityOrSession: 'আজীবন মেয়াদী',
+          issueDate: '১০ মার্চ ২০২৬',
+          personAddress: 'কান্দিরপাড়, কুমিল্লা',
+          signatoryName: 'মোঃ জাহিদুল আলম',
+          signatoryTitle: 'সভাপতি',
+          cardTerms: 'সংগঠনের সকল সামাজিক ও মানবিক কার্যক্রমে এই পরিচয়পত্রটি বৈধ পরিচয় হিসেবে গণ্য হবে।'
+        },
+        certificate: {
+          modeBadge: 'প্রত্যয়নপত্র মোড',
+          cardBadge: 'প্রত্যয়নপত্র',
+          lblName: 'প্রাপকের নাম *',
+          lblId: 'আইডি / রোল / রেজিঃ নং *',
+          lblRole: 'শ্রেণি / পদবী',
+          lblDept: 'বিভাগ / শাখা',
+          lblDate: 'শিক্ষাবর্ষ / মেয়াদ',
+          orgName: 'ঢাকা আইডিয়াল বিজ্ঞান কলেজ',
+          orgSub: 'স্থাপিত: ২০০৮ | EIIN: 108452',
+          orgAddress: 'বাড়ি-১৪, রোড-৫, ধানমন্ডি, ঢাকা-১২০৫',
+          orgPhone: '+৮৮০ ১৭১১-২২৩৩৪৪',
+          orgWeb: 'www.dhakaidealcollege.edu.bd',
+          personName: 'তানভীর আহমেদ রাহাত',
+          idNumber: 'STD-2026-109',
+          roleOrClass: 'একাদশ শ্রেণি',
+          deptOrSection: 'বিজ্ঞান বিভাগ',
+          fatherName: 'মোঃ কামরুল হাসান',
+          motherName: 'রোকেয়া বেগম',
+          bloodGroup: 'O+ (পজিটিভ)',
+          personPhone: '০১৭১২-৩৪৫৬৭৮',
+          validityOrSession: '২০২৫ - ২০২৬',
+          issueDate: '১৪ অক্টোবর ২০২৬',
+          personAddress: 'মিরপুর-১০, ঢাকা-১২১৬',
+          certRefNo: 'স্মারক/প্রত্যয়ন/২০২৬/১০৯',
+          certTitle: 'প্রত্যয়নপত্র',
+          certBody: '',
+          signatoryName: 'প্রফেসর ড. মাহবুবুর রহমান',
+          signatoryTitle: 'অধ্যক্ষ',
+          cardTerms: ''
+        },
+        rail: {
+          modeBadge: 'রেল আইডি মোড', cardBadge: 'রেল অ্যাকাউন্ট কার্ড',
+          lblName: 'গ্রাহকের নাম *', lblId: 'আইডি', lblRole: 'ধরন', lblDept: 'শাখা', lblDate: 'মেয়াদ',
+          orgName: "ANIK'S ZONE", orgSub: '', orgAddress: 'নাটোর', orgPhone: '০১৭XX-XXXXXX', orgWeb: '',
+          wideTitle: 'বাংলাদেশ রেলওয়ে', wideSub: 'ই-টিকেট অ্যাকাউন্ট কার্ড',
+          accName: 'মোঃ রহিম উদ্দিন', accMobile: '০১৭১২-৩৪৫৬৭৮', accEmail: 'rahim@example.com', accUser: '',
+          accPass: 'Rail@12345', accUrl: 'https://eticket.railway.gov.bd'
+        },
+        bhumi: {
+          modeBadge: 'ভূমি কার্ড মোড', cardBadge: 'ভূমি সেবা কার্ড',
+          lblName: 'গ্রাহকের নাম *', lblId: 'আইডি', lblRole: 'ধরন', lblDept: 'শাখা', lblDate: 'মেয়াদ',
+          orgName: "ANIK'S ZONE", orgSub: '', orgAddress: 'নাটোর', orgPhone: '০১৭XX-XXXXXX', orgWeb: '',
+          wideTitle: 'ভূমি সেবা অ্যাকাউন্ট', wideSub: 'land.gov.bd পোর্টাল',
+          accName: 'মোঃ করিম হোসেন', accMobile: '', accEmail: '', accUser: 'karim_land_01',
+          accPass: 'Land@12345', accUrl: 'https://land.gov.bd'
+        }
+      };
+
+      // কার্ডের সব স্ট্যাটিক লেখা এখানে ডিফল্ট থাকে, কিন্তু ফর্ম থেকে যেকোনো সময় বদলানো যায়
+      const LABEL_DEFAULTS = {
+        lblFatherT: 'পিতার নাম:', lblBloodT: 'রক্তের গ্রুপ:', lblMobileT: 'মোবাইল:', lblValidT: 'মেয়াদ / সেশন',
+        backTitle: 'বিস্তারিত ও জরুরি যোগাযোগ', backAddrLbl: 'স্থায়ী / বর্তমান ঠিকানা:', backIssueLbl: 'ইস্যু তারিখ:',
+        backTermsLbl: 'নির্দেশনাবলী:', qrCapId: 'তথ্য যাচাই করতে QR কোড স্ক্যান করুন',
+        foundText: 'কার্ডটি পাওয়া গেলে নিচের ঠিকানায় যোগাযোগের অনুরোধ করা হলো:',
+        wlName: 'নাম:', wlMobile: 'মোবাইল:', wlEmail: 'ইমেইল:', wlUser: 'ইউজার আইডি:', wlPass: 'পাসওয়ার্ড:',
+        wideBadge: '', wideQrCap: 'স্ক্যান করে লগইন পেজে যান', wideProvLbl: 'সেবা প্রদানকারী: ',
+        wideDisclaimer: 'এটি সরকারি পরিচয়পত্র নয়, শুধু সেবা গ্রহণকারীর অ্যাকাউন্ট তথ্য কার্ড। পাসওয়ার্ড অন্য কাউকে দেবেন না এবং প্রথম লগইনের পর বদলে নিন।'
+      };
+
+      // Application State
+      const state = {
+        mode: 'student',
+        theme: 'royal',
+        cardView: 'both',
+        photoUrl: DEFAULT_AVATAR,
+        logoUrl: DEFAULT_LOGO,
+        signUrl: '',
+        maskPass: false,
+        fontScale: 1.2,
+        showDisc: true,
+        fields: { ...LABEL_DEFAULTS, ...MODE_PRESETS.student, certRefNo: 'স্মারক/২০২৬/১০৯', certTitle: 'প্রত্যয়নপত্র', certBody: '' }
+      };
+
+      // Helper to build standard Bengali Certificate paragraph from current fields
+      function generateAutoCertificateBody() {
+        const f = state.fields;
+        return `এই মর্মে প্রত্যয়ন করা যাইতেছে যে, ${f.personName || '---'}, পিতা: ${f.fatherName || '---'}, মাতা: ${f.motherName || '---'}, ঠিকানা: ${f.personAddress || '---'}। সে অত্র প্রতিষ্ঠান "${f.orgName || '---'}"-এর ${f.roleOrClass || '---'} (${f.deptOrSection || '---'})-এর একজন নিয়মিত সদস্য/শিক্ষার্থী। তাহার আইডি/রোল নম্বর ${f.idNumber || '---'} এবং শিক্ষাবর্ষ/মেয়াদ ${f.validityOrSession || '---'}। আমার জানামতে সে উত্তম চরিত্রের অধিকারী এবং রাষ্ট্র বা প্রতিষ্ঠানের শৃঙ্খলা পরিপন্থী কোনো কার্যকলাপের সহিত জড়িত নহে। আমি তাহার উজ্জ্বল ভবিষ্যৎ ও সর্বাঙ্গীন সাফল্য কামনা করি।`;
+      }
+
+      // Sync Input Elements from State
+      function syncInputsFromState() {
+        document.querySelectorAll('.form-input').forEach((input) => {
+          const key = input.getAttribute('data-field');
+          if (key && state.fields[key] !== undefined) {
+            input.value = state.fields[key];
+          }
+        });
+      }
+
+      // Convert UTF-8 string into Latin-1 byte string so QRious supports Bengali characters cleanly
+      function toUtf8ByteString(str) {
+        try {
+          return unescape(encodeURIComponent(str));
+        } catch (e) {
+          return str;
+        }
+      }
+
+      // Render QR Codes
+      function renderQrCodes() {
+        const f = state.fields;
+        const qrPayload = [
+          `প্রতিষ্ঠান: ${f.orgName}`,
+          `নাম: ${f.personName}`,
+          `আইডি: ${f.idNumber}`,
+          `পদবী/শ্রেণি: ${f.roleOrClass}`,
+          `রক্তের গ্রুপ: ${f.bloodGroup}`,
+          `ফোন: ${f.personPhone}`
+        ].join('\n');
+
+        const encodedPayload = toUtf8ByteString(qrPayload);
+        const themeObj = THEMES[state.theme];
+
+        const cardQrElem = document.getElementById('qrCanvasCard');
+        const certQrElem = document.getElementById('qrCanvasCert');
+
+        if (window.QRious && cardQrElem && certQrElem) {
+          new QRious({
+            element: cardQrElem,
+            value: encodedPayload,
+            size: 160,
+            level: 'M',
+            foreground: '#0f172a',
+            background: '#ffffff'
+          });
+          new QRious({
+            element: certQrElem,
+            value: encodedPayload,
+            size: 140,
+            level: 'M',
+            foreground: themeObj.primary,
+            background: '#ffffff'
+          });
+        }
+      }
+
+      // ID কার্ডের স্ট্যাটিক লেখাগুলো ফর্ম থেকে বসানো
+      function applyLabels() {
+        const f = state.fields;
+        const t = (id, v) => { const e = document.getElementById(id); if (e && v !== undefined) e.textContent = v; };
+        t('prevLblFather', f.lblFatherT); t('prevLblBlood', f.lblBloodT); t('prevLblMobile', f.lblMobileT);
+        t('prevLblValid', f.lblValidT); t('prevBackTitle', f.backTitle); t('prevBackAddrLbl', f.backAddrLbl);
+        t('prevBackIssueLbl', f.backIssueLbl); t('prevBackTermsLbl', f.backTermsLbl);
+        t('prevQrCapId', f.qrCapId); t('prevFoundText', f.foundText);
+      }
+
+      // লেখা কার্ডের বাইরে গেলে অটো ছোট করে ভেতরে আনে (overflow হবে না)
+      function fitWide(card) {
+        let fs = state.fontScale;
+        card.style.setProperty('--fs', fs);
+        const left = document.getElementById('wideLeft');
+        const body = document.getElementById('wideBody');
+        const over = () => left.scrollHeight > left.clientHeight + 1 || body.scrollHeight > body.clientHeight + 1 || card.scrollHeight > card.clientHeight + 1;
+        while (over() && fs > 0.55) {
+          fs = Math.round((fs - 0.03) * 100) / 100;
+          card.style.setProperty('--fs', fs);
+        }
+        return fs;
+      }
+
+      // Rail / Bhumi কার্ড (QR এ শুধু পোর্টাল লিংক যায়, কোনো পাসওয়ার্ড নয়)
+      function renderWideCard() {
+        const f = state.fields;
+        const theme = THEMES[state.theme];
+        const card = document.getElementById('wideCard');
+        const set = (id, v) => { document.getElementById(id).textContent = v || ''; };
+        const row = (rowId, valId, v) => {
+          const has = !!(v && String(v).trim());
+          document.getElementById(rowId).classList.toggle('hidden', !has);
+          set(valId, has ? v : '');
+        };
+        document.getElementById('wideHeader').style.background = theme.headerGrad;
+        document.getElementById('wideStrip').style.background = theme.headerGrad;
+        document.getElementById('prevWideLogo').src = state.logoUrl;
+        set('prevWideTitle', f.wideTitle);
+        set('prevWideSub', f.wideSub);
+        set('prevWideBadge', f.wideBadge);
+        document.getElementById('prevWideBadge').classList.toggle('hidden', !(f.wideBadge && f.wideBadge.trim()));
+        set('prevWLName', f.wlName); set('prevWLMobile', f.wlMobile); set('prevWLEmail', f.wlEmail);
+        set('prevWLUser', f.wlUser); set('prevWLPass', f.wlPass);
+        row('wRowName', 'prevWName', f.accName);
+        row('wRowMobile', 'prevWMobile', f.accMobile);
+        row('wRowEmail', 'prevWEmail', f.accEmail);
+        row('wRowUser', 'prevWUser', f.accUser);
+        const passShown = state.maskPass && f.accPass ? '\u2022'.repeat(Math.min(f.accPass.length, 12)) : f.accPass;
+        row('wRowPass', 'prevWPass', passShown);
+        set('prevWProvLbl', f.wideProvLbl);
+        set('prevWProvider', f.orgName);
+        set('prevWHelp', f.orgPhone ? ' | ' + f.orgPhone : '');
+        document.getElementById('prevWProvRow').classList.toggle('hidden', !(f.orgName && f.orgName.trim()));
+        const disc = document.getElementById('prevWDisc');
+        disc.textContent = f.wideDisclaimer || '';
+        disc.classList.toggle('hidden', !state.showDisc || !(f.wideDisclaimer && f.wideDisclaimer.trim()));
+        set('prevWQrCap', f.wideQrCap);
+        const qrEl = document.getElementById('qrCanvasWide');
+        if (window.QRious && qrEl && f.accUrl && f.accUrl.trim()) {
+          new QRious({ element: qrEl, value: f.accUrl.trim(), size: 160, level: 'M', foreground: '#0f172a', background: '#ffffff' });
+        }
+        const used = fitWide(card);
+        const fv = document.getElementById('fsValue');
+        if (fv) fv.textContent = Math.round(state.fontScale * 100) + '%' + (used < state.fontScale - 0.001 ? ' (অটো-ফিট: ' + Math.round(used * 100) + '%)' : '');
+      }
+
+      // Main Render Function
+      function renderPreview() {
+        const f = state.fields;
+        const theme = THEMES[state.theme];
+        const preset = MODE_PRESETS[state.mode];
+
+        // 1. Update Mode Tabs Styling
+        document.querySelectorAll('.mode-tab').forEach((btn) => {
+          const isCurrent = btn.getAttribute('data-mode') === state.mode;
+          btn.className = isCurrent
+            ? 'mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-bold text-sm border bg-blue-600 text-white border-blue-600 shadow-sm transition-all'
+            : 'mode-tab flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-sm border bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 transition-all';
+        });
+
+        // 2. Update Theme Buttons Ring
+        document.querySelectorAll('.theme-btn').forEach((btn) => {
+          const isCurrent = btn.getAttribute('data-theme') === state.theme;
+          if (isCurrent) {
+            btn.classList.add('ring-2', 'ring-offset-2', 'ring-slate-900', 'scale-105');
+          } else {
+            btn.classList.remove('ring-2', 'ring-offset-2', 'ring-slate-900', 'scale-105');
+          }
+        });
+
+        // 3. Update Dynamic Form Labels & Visibility
+        document.getElementById('activeModeBadge').textContent = preset.modeBadge;
+        document.getElementById('lblPersonName').textContent = preset.lblName;
+        document.getElementById('lblIdNumber').textContent = preset.lblId;
+        document.getElementById('lblRoleOrClass').textContent = preset.lblRole;
+        document.getElementById('lblDeptOrSection').textContent = preset.lblDept;
+        document.getElementById('lblDateInfo').textContent = preset.lblDate;
+
+        const isCert = state.mode === 'certificate';
+        const isWide = state.mode === 'rail' || state.mode === 'bhumi';
+        document.getElementById('certificateCustomGroup').classList.toggle('hidden', !isCert);
+        document.getElementById('termsFieldGroup').classList.toggle('hidden', isCert || isWide);
+        document.getElementById('cardViewControls').classList.toggle('hidden', isCert || isWide);
+        document.getElementById('accountSection').classList.toggle('hidden', !isWide);
+        document.getElementById('personalSection').classList.toggle('hidden', isWide);
+        document.getElementById('signSection').classList.toggle('hidden', isWide);
+        document.getElementById('idLabelSection').classList.toggle('hidden', isWide || isCert);
+
+        // Toggle Front / Back / Certificate cards visibility
+        const idCardFront = document.getElementById('idCardFront');
+        const idCardBack = document.getElementById('idCardBack');
+        const certificateCard = document.getElementById('certificateCard');
+
+        document.getElementById('wideCard').classList.toggle('hidden', !isWide);
+        if (isWide) {
+          idCardFront.classList.add('hidden');
+          idCardBack.classList.add('hidden');
+          certificateCard.classList.add('hidden');
+        } else if (isCert) {
+          idCardFront.classList.add('hidden');
+          idCardBack.classList.add('hidden');
+          certificateCard.classList.remove('hidden');
+        } else {
+          certificateCard.classList.add('hidden');
+          idCardFront.classList.toggle('hidden', state.cardView === 'back');
+          idCardBack.classList.toggle('hidden', state.cardView === 'front');
+        }
+
+        // 4. Apply Theme Colors to ID Card
+        document.getElementById('frontHeaderBg').style.background = theme.headerGrad;
+        document.getElementById('frontFooterStrip').style.background = theme.headerGrad;
+        document.getElementById('backHeaderStrip').style.background = theme.headerGrad;
+        document.getElementById('backFooterStrip').style.background = theme.headerGrad;
+        document.getElementById('photoRing').style.borderColor = theme.primary;
+
+        const roleBadge = document.getElementById('prevRoleOrClass');
+        roleBadge.style.backgroundColor = theme.secondary;
+        roleBadge.style.color = theme.textAccent;
+
+        // 5. Populate ID Card Front Content
+        document.getElementById('prevLogoFront').src = state.logoUrl;
+        document.getElementById('prevPhoto').src = state.photoUrl;
+        document.getElementById('prevOrgNameFront').textContent = f.orgName;
+        document.getElementById('prevOrgSubFront').textContent = f.orgSub;
+        document.getElementById('prevCardBadge').textContent = preset.cardBadge;
+        document.getElementById('prevPersonName').textContent = f.personName;
+        roleBadge.textContent = f.roleOrClass;
+
+        document.getElementById('prevLblId').textContent = state.mode === 'student' ? 'রোল / আইডি:' : 'আইডি নং:';
+        document.getElementById('prevIdNumber').textContent = f.idNumber;
+        document.getElementById('prevLblDept').textContent = state.mode === 'student' ? 'বিভাগ / শাখা:' : 'ডিপার্টমেন্ট:';
+        document.getElementById('prevDept').textContent = f.deptOrSection;
+        document.getElementById('prevFather').textContent = f.fatherName;
+        document.getElementById('frontFatherRow').classList.toggle('hidden', state.mode === 'employee');
+        document.getElementById('prevBlood').textContent = f.bloodGroup;
+        document.getElementById('prevPhone').textContent = f.personPhone;
+        document.getElementById('prevValidity').textContent = f.validityOrSession;
+        document.getElementById('prevSignTitleFront').textContent = f.signatoryTitle;
+
+        const signImgFront = document.getElementById('prevSignFront');
+        const signTxtFront = document.getElementById('prevSignTextFront');
+        if (state.signUrl) {
+          signImgFront.src = state.signUrl;
+          signImgFront.classList.remove('hidden');
+          signTxtFront.classList.add('hidden');
+        } else {
+          signImgFront.classList.add('hidden');
+          signTxtFront.classList.remove('hidden');
+          signTxtFront.textContent = f.signatoryName;
+        }
+
+        // 6. Populate ID Card Back Content
+        document.getElementById('prevAddressBack').textContent = f.personAddress;
+        document.getElementById('prevIssueDateBack').textContent = f.issueDate;
+        document.getElementById('prevTermsBack').textContent = f.cardTerms;
+        document.getElementById('prevOrgNameBack').textContent = f.orgName;
+        document.getElementById('prevOrgAddressBack').textContent = f.orgAddress;
+        document.getElementById('prevOrgContactBack').textContent = `${f.orgPhone} | ${f.orgWeb}`;
+
+        // 7. Populate Certificate Content
+        document.getElementById('certOuterBorder').style.borderColor = theme.borderHex;
+        document.getElementById('certInnerBorder').style.borderColor = theme.borderHex;
+        document.getElementById('certHeaderDivider').style.borderColor = theme.secondary;
+        document.getElementById('prevOrgNameCert').style.color = theme.textAccent;
+        document.getElementById('prevCertTitle').style.background = theme.headerGrad;
+        document.getElementById('certStampBadge').style.borderColor = theme.primary;
+        document.getElementById('certStampBadge').style.color = theme.primary;
+
+        document.getElementById('prevCertWatermark').src = state.logoUrl;
+        document.getElementById('prevLogoCert').src = state.logoUrl;
+        document.getElementById('prevPhotoCert').src = state.photoUrl;
+        document.getElementById('prevOrgNameCert').textContent = f.orgName;
+        document.getElementById('prevOrgSubCert').textContent = f.orgSub;
+        document.getElementById('prevOrgAddressCert').textContent = `${f.orgAddress} | ফোন: ${f.orgPhone}`;
+        document.getElementById('prevCertRef').textContent = f.certRefNo;
+        document.getElementById('prevCertDate').textContent = f.issueDate;
+        document.getElementById('prevCertTitle').textContent = f.certTitle || 'প্রত্যয়নপত্র';
+
+        if (!f.certBody || !f.certBody.trim()) {
+          f.certBody = generateAutoCertificateBody();
+          const certTextarea = document.querySelector('[data-field="certBody"]');
+          if (certTextarea) certTextarea.value = f.certBody;
+        }
+        document.getElementById('prevCertBody').textContent = f.certBody;
+        document.getElementById('prevCertId').textContent = f.idNumber;
+        document.getElementById('prevCertRole').textContent = `${f.roleOrClass} (${f.deptOrSection})`;
+        document.getElementById('prevCertBlood').textContent = f.bloodGroup;
+
+        const signImgCert = document.getElementById('prevSignCert');
+        const signTxtCert = document.getElementById('prevSignTextCert');
+        if (state.signUrl) {
+          signImgCert.src = state.signUrl;
+          signImgCert.classList.remove('hidden');
+          signTxtCert.classList.add('hidden');
+        } else {
+          signImgCert.classList.add('hidden');
+          signTxtCert.classList.remove('hidden');
+          signTxtCert.textContent = f.signatoryName;
+        }
+        document.getElementById('prevSignTitleCert').textContent = f.signatoryTitle;
+        document.getElementById('prevOrgNameSign').textContent = f.orgName;
+
+        // 8. Update QR Codes & Responsive Scale
+        applyLabels();
+        renderWideCard();
+        renderQrCodes();
+        adjustMobileScale();
+      }
+
+      // Responsive Scaling for Mobile Viewports so wide Certificates fit cleanly
+      function adjustMobileScale() {
+        const viewport = document.getElementById('previewViewport');
+        const printable = document.getElementById('printableArea');
+        if (!viewport || !printable) return;
+
+        printable.style.transform = 'scale(1)';
+        printable.style.marginBottom = '0px';
+
+        const availableWidth = viewport.clientWidth - 16;
+        const contentWidth = printable.scrollWidth;
+
+        if ((state.mode === 'certificate' || state.mode === 'rail' || state.mode === 'bhumi') && contentWidth > availableWidth) {
+          const scaleRatio = Math.max(0.5, availableWidth / contentWidth);
+          printable.style.transform = `scale(${scaleRatio})`;
+          const heightReduction = printable.offsetHeight * (1 - scaleRatio);
+          printable.style.marginBottom = `-${Math.floor(heightReduction)}px`;
+        }
+      }
+
+      // File Reader Helper for Image Uploads
+      function bindImageUpload(inputId, stateKey) {
+        const fileInput = document.getElementById(inputId);
+        if (!fileInput) return;
+        fileInput.addEventListener('change', (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            state[stateKey] = event.target.result;
+            renderPreview();
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // Initialize All Event Listeners
+      function initEvents() {
+        // Mode Tabs
+        document.querySelectorAll('.mode-tab').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const selectedMode = btn.getAttribute('data-mode');
+            state.mode = selectedMode;
+            const presetData = MODE_PRESETS[selectedMode];
+            state.fields = {
+              ...state.fields,
+              ...presetData,
+              certRefNo: state.fields.certRefNo || 'স্মারক/২০২৬/১০৯',
+              certTitle: state.fields.certTitle || 'প্রত্যয়নপত্র'
+            };
+            if (selectedMode === 'certificate') {
+              state.fields.certBody = generateAutoCertificateBody();
+            }
+            syncInputsFromState();
+            renderPreview();
+          });
+        });
+
+        // Theme Selector
+        document.querySelectorAll('.theme-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            state.theme = btn.getAttribute('data-theme');
+            renderPreview();
+          });
+        });
+
+        // Card View Controls (Both / Front / Back)
+        document.querySelectorAll('.view-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            state.cardView = btn.getAttribute('data-view');
+            document.querySelectorAll('.view-btn').forEach((b) => {
+              const active = b.getAttribute('data-view') === state.cardView;
+              b.className = active
+                ? 'view-btn px-3 py-1 rounded-lg text-xs font-semibold bg-white text-slate-800 shadow-sm transition'
+                : 'view-btn px-3 py-1 rounded-lg text-xs font-semibold text-slate-600 transition';
+            });
+            renderPreview();
+          });
+        });
+
+        // Live Text Inputs
+        document.querySelectorAll('.form-input').forEach((input) => {
+          input.addEventListener('input', (e) => {
+            const field = e.target.getAttribute('data-field');
+            if (field) {
+              state.fields[field] = e.target.value;
+              renderPreview();
+            }
+          });
+        });
+
+        // Auto Generate Certificate Body Button
+        document.getElementById('btnAutoGenerateCertText').addEventListener('click', () => {
+          state.fields.certBody = generateAutoCertificateBody();
+          syncInputsFromState();
+          renderPreview();
+        });
+
+        // Demo Reset Button
+        document.getElementById('btnResetDemo').addEventListener('click', () => {
+          state.photoUrl = DEFAULT_AVATAR;
+          state.logoUrl = DEFAULT_LOGO;
+          state.signUrl = '';
+          state.fields = {
+            ...LABEL_DEFAULTS,
+            ...MODE_PRESETS[state.mode],
+            certRefNo: 'স্মারক/২০২৬/১০৯',
+            certTitle: 'প্রত্যয়নপত্র',
+            certBody: ''
+          };
+          if (state.mode === 'certificate') {
+            state.fields.certBody = generateAutoCertificateBody();
+          }
+          syncInputsFromState();
+          renderPreview();
+        });
+
+        // Print Button
+        document.getElementById('btnPrint').addEventListener('click', () => {
+          window.print();
+        });
+
+        // ---------- Export helpers (html-to-image: preview যেমন দেখায় ঠিক তেমনই আসে) ----------
+        const isWideMode = () => state.mode === 'rail' || state.mode === 'bhumi';
+        function exportNodes(forceBoth) {
+          if (state.mode === 'certificate') return [document.getElementById('certificateCard')];
+          if (isWideMode()) return [document.getElementById('wideCard')];
+          const all = [document.getElementById('idCardFront'), document.getElementById('idCardBack')];
+          return forceBoth ? all : all.filter((n) => !n.classList.contains('hidden'));
+        }
+        async function snap(node, fmt) {
+          const opts = { pixelRatio: 3, backgroundColor: '#ffffff', cacheBust: false, style: { boxShadow: 'none', transform: 'none', margin: '0' } };
+          const run = (o) => fmt === 'jpeg' ? htmlToImage.toJpeg(node, Object.assign({ quality: 0.95 }, o)) : htmlToImage.toPng(node, o);
+          try {
+            await run(opts); // প্রথমবার ফন্ট/ছবি লোড করার জন্য
+            return await run(opts);
+          } catch (e) {
+            const o2 = Object.assign({}, opts, { skipFonts: true });
+            await run(o2);
+            return await run(o2);
+          }
+        }
+        async function captureCards(forceBoth, fmt) {
+          const nodes = exportNodes(forceBoth);
+          const wasHidden = nodes.map((n) => n.classList.contains('hidden'));
+          nodes.forEach((n) => n.classList.remove('hidden'));
+          try {
+            if (document.fonts && document.fonts.ready) await document.fonts.ready;
+            if (isWideMode()) renderWideCard();
+            await new Promise((r) => setTimeout(r, 150));
+            nodes.forEach((n) => n.querySelectorAll('img').forEach((im) => { if (!im.getAttribute('src')) im.setAttribute('src', 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'); }));
+            const out = [];
+            for (const n of nodes) out.push({ url: await snap(n, fmt), w: n.offsetWidth, h: n.offsetHeight });
+            return out;
+          } finally {
+            nodes.forEach((n, i) => { if (wasHidden[i]) n.classList.add('hidden'); });
+          }
+        }
+        const loadImg = (url) => new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = url; });
+        const safeName = () => (state.fields.idNumber || 'card').replace(/[^a-zA-Z0-9-_]/g, '_');
+
+        // High-Res PNG Download (সব কার্ড পাশাপাশি এক ছবিতে)
+        document.getElementById('btnDownload').addEventListener('click', async () => {
+          const btnText = document.getElementById('downloadBtnText');
+          try {
+            btnText.textContent = 'তৈরি হচ্ছে...';
+            const cards = await captureCards(false);
+            const imgs = await Promise.all(cards.map((c) => loadImg(c.url)));
+            const gap = 60, pad = 40;
+            const W = imgs.reduce((a, im) => a + im.width, 0) + gap * (imgs.length - 1) + pad * 2;
+            const H = Math.max(...imgs.map((im) => im.height)) + pad * 2;
+            const cv = document.createElement('canvas');
+            cv.width = W; cv.height = H;
+            const ctx = cv.getContext('2d');
+            ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, W, H);
+            let x = pad;
+            imgs.forEach((im) => { ctx.drawImage(im, x, pad); x += im.width + gap; });
+            const link = document.createElement('a');
+            link.download = state.mode + '_' + safeName() + '_HD.png';
+            link.href = cv.toDataURL('image/png');
+            link.click();
+          } catch (err) {
+            console.error(err);
+            alert('ডাউনলোড করার সময় একটি সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।\n(' + ((err && err.message) || (err && err.type) || err) + ')');
+          } finally {
+            btnText.textContent = 'HD ডাউনলোড';
+          }
+        });
+
+        // A4 PDF Export: ID কার্ডের সামনে-পেছন পাশাপাশি, রেল/ভূমি কার্ড আসল সাইজে, প্রত্যয়নপত্র A4 landscape
+        document.getElementById('btnPdf').addEventListener('click', async () => {
+          const btnText = document.getElementById('pdfBtnText');
+          try {
+            btnText.textContent = 'তৈরি হচ্ছে...';
+            const cards = await captureCards(true, 'jpeg');
+            const { jsPDF } = window.jspdf;
+            let doc;
+            if (state.mode === 'certificate') {
+              doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+              const c = cards[0];
+              let w = 281, h = w * c.h / c.w;
+              if (h > 194) { h = 194; w = h * c.w / c.h; }
+              doc.addImage(c.url, 'JPEG', (297 - w) / 2, (210 - h) / 2, w, h, undefined, 'FAST');
+            } else {
+              doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+              const cw = isWideMode() ? 85.6 : 54;
+              const gap = 12;
+              const totalW = cards.length * cw + (cards.length - 1) * gap;
+              let x = (210 - totalW) / 2;
+              const y = 20;
+              doc.setDrawColor(170); doc.setLineWidth(0.15);
+              if (doc.setLineDash) doc.setLineDash([1.2, 1.2], 0);
+              cards.forEach((c) => {
+                const ch = cw * c.h / c.w;
+                doc.addImage(c.url, 'JPEG', x, y, cw, ch, undefined, 'FAST');
+                doc.rect(x - 0.6, y - 0.6, cw + 1.2, ch + 1.2);
+                x += cw + gap;
+              });
+            }
+            doc.save(state.mode + '_' + safeName() + '.pdf');
+          } catch (err) {
+            console.error(err);
+            alert('PDF তৈরি করতে সমস্যা হয়েছে। ইন্টারনেট চালু আছে কিনা দেখে আবার চেষ্টা করুন।\n(' + ((err && err.message) || (err && err.type) || err) + ')');
+          } finally {
+            btnText.textContent = 'PDF (A4)';
+          }
+        });
+
+        // Font size slider & note toggle (Rail / Bhumi)
+        document.getElementById('fsRange').addEventListener('input', (e) => {
+          state.fontScale = Number(e.target.value) / 100;
+          renderPreview();
+        });
+        document.getElementById('chkDisc').addEventListener('change', (e) => {
+          state.showDisc = e.target.checked;
+          renderPreview();
+        });
+
+        // Mask password toggle
+        document.getElementById('chkMaskPass').addEventListener('change', (e) => {
+          state.maskPass = e.target.checked;
+          renderPreview();
+        });
+
+        // Image Uploads
+        bindImageUpload('uploadPhoto', 'photoUrl');
+        bindImageUpload('uploadLogo', 'logoUrl');
+        bindImageUpload('uploadSign', 'signUrl');
+
+        // Window Resize Listener for Responsive Preview
+        window.addEventListener('resize', adjustMobileScale);
+      }
+
+      // Boot Application
+      syncInputsFromState();
+      initEvents();
+      renderPreview();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => renderPreview());
+    })();
+  </script>
+</body>
+</html>
